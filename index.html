@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="favicon" href="/img/logo.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Portwind</title>
+</head>
+
+<body class="font-nunito">
+    <!-- loader -->
+    <div id="loader" class="h-[100vh] w-[100vw] flex items-center justify-center bg-white">
+        <img src="https://i.pinimg.com/originals/83/f9/2c/83f92c18942aa4e8b2aea7cbf1fd7bd4.gif" alt="Loading..." />
+      </div>
+    <div id="full" class="hidden">
+    <!-- intro section -->
+    <div id="screen"
+        class="h-[50vh] lg:h-[100vh] bg-gradient-to-t from-indigo-300 flex items-end relative overflow-hidden">
+        <nav id="nav" class="w-[100vw] fixed top-0 bg-slate-50">
+            <div class="container mx-auto  py-5 flex justify-between items-center">
+                <div class="flex  items-center gap-2">
+                    <img class="w-12" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632/04de2e31234507.564a1d23645bf.gif" alt="Portwind.png">
+                    <span id="PortWind" class="text-2xl font-bold text-indigo-900 ">Portwind</span>
+                </div>
+                <ul id="bmenu" class="hidden md:flex md:gap-3 font-bold font-nunito text-gray-600 uppercase text-sm">
+                    <li id="hLink"><a class="hover:text-gray-500" href="#">Home</a></li>
+                    <li id="hLink"><a class="hover:text-gray-500" href="#About">About</a></li>
+                    <li id="hLink"><a class="hover:text-gray-500" href="#Services">Services</a></li>
+                    <li id="hLink"><a class="hover:text-gray-500" href="#Work">Work</a></li>
+                    <li id="hLink"><a class="hover:text-gray-500" href="#Contact">Contact</a></li>
+                </ul>
+                <div id="mode"
+                    class="cursor-pointer p-2 h-fit flex justify-center items-center rounded-full bg-slate-800 drop-shadow-xl hover:drop-shadow-lg">
+                    <img src="https://i.pinimg.com/originals/e3/43/ec/e343ec80a8b6af8083e1bd82cac10585.gif" class="moon w-3 md:w-5 cursor-pointer" alt="switch_modes.png">
+                    <img src="https://media3.giphy.com/media/H4JyPOM8FRmqNxUWn0/giphy.gif?cid=6c09b952lvnh2utq9ybjoe7wm089mbf0brl5gmk7zsozzbq5&rid=giphy.gif&ct=s"
+                        class="sun hidden w-3 md:w-7 cursor-pointer" alt="switch_modes.png">
+                </div>
+                <div id="hamburger"
+                    class="flex flex-col items-center justify-center gap-0.5 md:hidden bg-slate-100 w-9 h-6 rounded-md hover:drop-shadow-md cursor-pointer z-20">
+                    <span class="h-0.5 w-6 bg-black"></span>
+                    <span class="h-0.5 w-6 bg-black"></span>
+                    <span class="h-0.5 w-6 bg-black"></span>
+                </div>
+
+            </div>
+            <ul id="menu"
+                class="hidden absolute md:hidden w-[100vw] bg-gradient-to-t from-indigo-400 bg-transparent  text-black rounded-b-3xl p-5 space-y-4 text-center font-bold uppercase text-sm font-nunito z-20">
+                <li id="hLink"><a class="hover:text-slate-700" href="#">Home</a></li>
+                <li id="hLink"><a class="hover:text-slate-700" href="#About">About</a></li>
+                <li id="hLink"><a class="hover:text-slate-700" href="#Services">Services</a></li>
+                <li id="hLink"><a class="hover:text-slate-700" href="#Work">Work</a></li>
+                <li id="hLink"><a class="hover:text-slate-700" href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- intro content -->
+        <!-- image -->
+        <img id="image" class="mx-[40vw] sm:mx-[55vw] md:mx-[65vw] lg:mx-[20vw] xl:mx-[28vw] h-2/3 lg:h-5/6 md:h-3/4"
+            src="./img/My project.png" alt="Man-Image.png">
+        <!-- circle -->
+        <div id="circle"
+            class="absolute left-0 right-0 mx-[20vw] xl:mx-[28vw] -z-10 -bottom-36 lg:rounded-full lg:w-big lg:h-big lg:bg-gradient-to-t lg:from-indigo-900 lg:to-indigo-400">
+        </div>
+        <!-- animated text -->
+        <div
+            class="absolute font-bold font-nunito left-[10vw] text-2xl md:text-4xl md:left-[20vw] lg:text-5xl lg:left-[6vw] xl:left-[5vw] bottom-1/3 lg:bottom-1/2 xl:text-7xl">
+            <span id="head" class="text-gray-600">WEB</span>
+            <p id="text" class="text-red-600"></p>
+        </div>
+        <!-- texts -->
+        <div id="textbox"
+            class="bg-slate-100 absolute hidden lg:flex flex-col gap-5 bottom-1/3 rounded-lg p-5 right-10 w-[30vw] h-fit shadow-lg hover:drop-shadow-xl">
+            <span id="heading" class="text-4xl xl:text-5xl font-nunito font-bold">Hi, I am Sudhi</span>
+            <span id="intro" class="text-gray-700 font-semibold font-nunito xl:text-lg">I am newbie in the field of web
+                development and I have prior knowledge in tech stacks like: HTML, CSS, TailWind CSS, etc. I am eager to
+                learn and grow with time.</span>
+            <button id="btn"
+                class="bg-indigo-800 text-white w-[6vw] p-3 h-[6vh] rounded-lg hover:bg-indigo-900 hover: shadow-sm active:bg-indigo-950 active:drop-shadow-lg font-bold lg:text-md lg:p-1 lg:w-[9vw] xl:text-lg font-nunito cursor-pointer"><a
+                    href="#Contact">Hire Me</a></button>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="About"
+        class="my-52 sm:my-64 md:my-10 mx-auto flex flex-col-reverse gap-10 md:flex-row justify-between items-center w-[75vw] h-[70vh]">
+        <!-- <div class="container mx-auto py-40 flex"> -->
+        <!-- left -->
+        <div class="relative">
+            <img class="h-1/4 absolute top-0 left-0 -z-10" src="https://i.gifer.com/WG8P.gif" alt="backdots.png">
+            <div class="h-full rounded-full overflow-hidden">
+                <img id="pic1" class="w-[50vw] md:w-[25vw]" src="./img/profile-pic (6).png" alt="Profile-pic">
+                <img id="pic2" class="hidden w-[50vw] md:w-[25vw]" src="./img/profile-pic (5).png" alt="Profile-pic">
+            </div>
+        </div>
+        <!-- right -->
+        <div class="w-[75vw] md:w-[45vw] flex flex-col gap-3">
+            <span id="head1" class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">ABOUT
+                ME</span>
+            <span id="head2"
+                class="text-slate-800 font-medium text-xl lg:text-3xl cursor-pointer hover:text-slate-700">Better
+                Design</span>
+            <span id="head3"
+                class="text-slate-800 font-medium text-xl lg:text-3xl cursor-pointer hover:text-slate-700">Better
+                Experience</span>
+            <div class="text-gray-500 text-md lg:text-lg">I am a front-end web-developer and designer. I have worked on
+                certain projects such as Weather Website, Cars Website, etc</div>
+            <h2 class="text-gray-500 font-medium text-lg lg:text-xl">HTML</h2>
+            <div class="bg-gray-400 w-full h-1.5 rounded-lg">
+                <div id="fill1" class="bg-indigo-600 w-full h-1.5 rounded-lg"></div>
+            </div>
+            <h2 class="text-gray-500 font-medium text-lg lg:text-xl">TailWind CSS</h2>
+            <div class="bg-gray-400 w-full h-1.5 rounded-lg">
+                <div id="fill2" class="bg-indigo-600 w-2/3 h-1.5 rounded-lg"></div>
+            </div>
+            <h2 class="text-gray-500 font-medium text-lg lg:text-xl">JavaScript</h2>
+            <div class="bg-gray-400 w-full h-1.5 rounded-lg">
+                <div id="fill3" class="bg-indigo-600 w-1/6 h-1.5 rounded-lg"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Services -->
+    <div id="Services" class="mx-auto flex justify-center items-center">
+        <div class="container w-[75vw] md:w-[82vw] flex flex-col gap-2 lg:gap-3 justify-center items-center">
+            <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">SERVICES</h1>
+            <h1 class="text-slate-800 font-medium text-xl lg:text-3xl cursor-pointer hover:text-slate-700">What do I
+                offer?</h1>
+            <span class="text-gray-400 w-2/3 font-semibold font-nunito xl:text-lg text-center">My approach to
+                web-development and design is to create a website that strengthens the company's brand and improves the
+                ease of use of the customer.</span>
+            <div class="flex flex-wrap gap-5">
+                <div id="card1" 
+                    class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+                    <img id="image1" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+                    <img id="image2" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+                    <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+                    </h1>
+                    <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+                        websites for individuals and businesses</p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+                        href="#UX/ UI design">Read More</a>
+                </div><div id="card2" 
+                class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+                <img id="image3" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+                <img id="image4" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+                <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+                </h1>
+                <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+                    websites for individuals and businesses</p>
+                <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+                    href="#UX/ UI design">Read More</a>
+            </div><div id="card3" 
+            class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+            <img id="image5" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+            <img id="image6" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+            <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+            </h1>
+            <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+                websites for individuals and businesses</p>
+            <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+                href="#UX/ UI design">Read More</a>
+        </div><div id="card4" 
+        class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+        <img id="image7" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+        <img id="image8" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+        <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+        </h1>
+        <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+            websites for individuals and businesses</p>
+        <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+            href="#UX/ UI design">Read More</a>
+    </div><div id="card5" 
+    class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+    <img id="image9" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+    <img id="image10" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+    <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+    </h1>
+    <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+        websites for individuals and businesses</p>
+    <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+        href="#UX/ UI design">Read More</a>
+</div>
+<div id="card6" 
+                    class="bg-slate-50 flex flex-col gap-2 md:gap-3 w-full md:w-[25vw] rounded-xl p-4 shadow-2xl flex-wrap">
+                    <img id="image11" class="image w-1/6 rounded-full" src="./img/icon.png" alt="" srcset="">
+                    <img id="image12" class="image hidden w-1/6 rounded-full" src="./img/icon2.png" alt="" srcset="">
+                    <h1 class="text-indigo-600 font-bold lg:text-xl cursor-pointer hover:text-indigo-700">UX/ UI DESIGN
+                    </h1>
+                    <p class="text-gray-400 font-semibold font-nunito xl:text-lg">I specialize in creating interactive
+                        websites for individuals and businesses</p>
+                    <a class="bg-indigo-600 hover:bg-indigo-700 shadow-lg p-3 w-[25vw] md:w-[20vw] lg:w-[12vw] rounded-lg font-nunito font-bold text-white flex items-center justify-center"
+                        href="#UX/ UI design">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- works -->
+    <div id="Works" class="py-40">
+        <div class="container mx-auto">
+          <!-- top -->
+          <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold">PORTFOLIO</h1>
+            <h1 class="text-3xl dark:text-white">Works & Projects</h1>
+            <p class="w-1/2 text-center text-gray-400">
+              I help designers, small agencies and businesses bring their ideas to
+              life. I have put down an example of a weather website for instance.
+            </p>
+          </div>
+          <!-- bottom -->
+          <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+            <!-- card -->
+            <div
+              class="w-full md:w-5/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110"
+            >
+              <a href="https://sudhidutta7694.github.io/glug_projects/" target="_blank" rel="noopener noreferrer"><img src="https://icon-library.com/images/weather-icon-gif/weather-icon-gif-15.jpg" /></a>
+            </div>
+          </div>
+    <!-- Top  -->
+    <div id="Contact" class="flex my-5 flex-col gap-3 items-center">
+        <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+        <h1 class="text-3xl">Have A Question?</h1>
+        <p class="w-1/2 text-center text-gray-400">
+          Do you have an idea? Let's discuss it and see what we can do together.
+        </p>
+      </div>
+    <!-- Bottom -->
+    <form class="mt-5 p-8 flex flex-col gap-5 items-center">
+        <input
+          class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 hover:ring-indigo-400 rounded-lg"
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 hover:ring-indigo-400 rounded-lg"
+          type="email"
+          placeholder="Email Id"
+        />
+        <textarea
+          class="p-2 w-full md:w-1/2 ring-1 ring-indigo-300 hover:ring-indigo-400 rounded-lg"
+          cols="30"
+          rows="10"
+          placeholder="Type Your Message..."
+        ></textarea>
+        <button
+          class="w-1/6 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium px-3 py-2 rounded-lg shadow-lg cursor-pointer"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <!-- footer -->
+    <div id="footer" class="w-full bg-slate-50 hidden bottom-0">
+        <div class="container mx-auto py-5 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img class="w-12" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632/04de2e31234507.564a1d23645bf.gif" alt="" />
+            <span class="text-2xl font-bold text-black">Portwind.</span>
+          </div>
+          <span class="hidden md:block font-medium text-black"
+            >© 2022 Portwind. Design with ♥️ by Sudhi Sundar Dutta.</span
+          >
+          <div class="flex gap-2">
+            <div class="bg-slate-800 rounded-full p-3">
+            <img class="w-4 cursor-pointer" src="./img/facebook.png" alt="" />
+            </div>
+            <div class="bg-slate-800 rounded-full p-3">
+            <img class="w-4 cursor-pointer" src="./img/instagram.png" alt="" />
+            </div>
+            <div class="bg-slate-800 rounded-full p-3">
+            <img class="w-4 cursor-pointer" src="./img/twitter.png" alt="" />
+            </div>
+            <div class="bg-slate-800 rounded-full p-3">
+            <img class="w-4 cursor-pointer" src="./img/linkedin.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <script src="./loader.js"></script>
+    <script src="./toggle.js"></script>
+    <script src="./autotyping.js"></script>
+</body>
+
+</html>
